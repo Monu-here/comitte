@@ -2,7 +2,7 @@
 @section('content')
 @include('layout.sidebar')
     <div class="mb-3">
-        <form method="POST" action="{{ route('member.add', $comitte) }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('member.add',['comitte_id'=>$comitte_id]) }}" enctype="multipart/form-data">
 
         {{-- <form action="{{route('member.add')}}" method="POST" enctype="multipart/form-data"> --}}
             @csrf

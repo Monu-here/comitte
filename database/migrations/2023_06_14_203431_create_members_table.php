@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('doc');
             $table->bigInteger('doc_no');
             $table->text('image');
-            // $table->foreignId('comitte_id')->constrained()->onDelete('cascade');
             $table->unsignedBigInteger('comitte_id');
             $table->foreign('comitte_id')->references('id')->on('comittes');
             $table->timestamps();
@@ -34,3 +33,4 @@ return new class extends Migration
         Schema::dropIfExists('members');
     }
 };
+

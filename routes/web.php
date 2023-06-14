@@ -34,7 +34,7 @@ Route::get('/delete/{id}',[comitteController::class,'delete'])->name('delete');
 });
 Route::prefix('member')->name('member.')->group(function(){
 Route::get('/{comitte}/index', [memberController::class, 'index'])->name('index');
-Route::match(["GET", "POST"], '/add', [memberController::class, 'add'])->name('add');
+Route::match(["GET", "POST"], 'add/{comitte_id}', [memberController::class, 'add'])->name('add');
 Route::get('/delete/{id}',[memberController::class,'delete'])->name('delete');
 });
 

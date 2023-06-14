@@ -11,7 +11,7 @@
         <div class="col-md-6">
             <div class="button">
                 {{-- <a href="{{ route('member.add') }}" class="btn btn-primary">Add Member</a> --}}
-                <a href="{{ route('member.add') }}">Add Member</a>
+                <a href="{{ route('member.add',['comitte_id'=>$comitte->id]) }}">Add Member</a>
 
 
             </div>
@@ -45,6 +45,7 @@
     </tr>
 
 @endforeach
+
 </table>
 @endsection
 <style>
